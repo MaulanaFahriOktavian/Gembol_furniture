@@ -39,7 +39,7 @@ class ProductDetail extends Component
     public function addToCart()
     {
         if ($this->qty > $this->product->stock) {
-            $this->dispatch('notify', message: '⚠️ Stok tidak mencukupi!', type: 'error');
+            $this->dispatch('notify', message: 'Not enough stock!', type: 'error');
             return;
         }
 
@@ -49,11 +49,12 @@ class ProductDetail extends Component
             variant: $this->selectedVariant,
             finish: $this->selectedFinish
         );
+        $this->dispatch('notify', message: 'Added to cart.', type: 'success');
     }
 
     public function render()
     {
         return view('livewire.customer.product-detail')
-            ->layout('layouts.app', ['title' => $this->product->name . ' | VoktaStyle']);
+            ->layout('components.layouts.app', ['title' => $this->product->name . ' | BeWood']);
     }
 }

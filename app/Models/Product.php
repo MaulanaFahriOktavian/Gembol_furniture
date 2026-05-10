@@ -14,7 +14,7 @@ class Product extends Model
     protected $fillable = [
         'category_id', 'name', 'slug', 'short_description', 'description',
         'price', 'discount_price', 'stock', 'sku', 'variants', 'finishes',
-        'specifications', 'images', 'weight', 'length', 'width', 'height', 
+        'specifications', 'materials', 'images', 'weight', 'length', 'width', 'height', 
         'status', 'is_featured', 'view_count', 'sold_count', 'rating_average', 'review_count'
     ];
 

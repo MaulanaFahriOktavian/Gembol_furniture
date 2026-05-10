@@ -18,5 +18,5 @@ class Logout
         Session::regenerateToken();
 
         return redirect('/');
-    }
+    }  
 }
